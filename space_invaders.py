@@ -55,6 +55,9 @@ while True:
 	    spaceship = spaceship + 1
 	elif key == curses.KEY_LEFT and spaceship > 0:
 	    spaceship = spaceship - 1
+	elif key == ord('q'):
+		curses.endwin()
+		quit()
 
 	# Remove off-screen rockets
 	rockets = list(filter(lambda rocket: rocket[0] > 0, rockets))
